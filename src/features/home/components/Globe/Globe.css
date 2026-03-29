@@ -1,0 +1,10 @@
+.globe-map {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+/* Hide MapLibre branding */
+.globe-map .maplibregl-ctrl-logo,
+.globe-map .maplibregl-ctrl-attrib {
+  display: none !important;
+}

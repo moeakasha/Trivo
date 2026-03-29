@@ -1,0 +1,121 @@
+.page {
+  --f7-page-bg-color: #F7F7F7;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: #F7F7F7;
+  padding-bottom: 40px;
+}
+
+/* ── Profile ── */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 28px;
+  margin-bottom: 36px;
+}
+
+.avatar-wrapper {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filter-pill {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 100px;
+  padding: 13px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+/* ── Globe ── */
+.globe-section {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.18));
+  margin-bottom: 32px;
+}
+
+/* ── Stats ── */
+.stats-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: #AAAAAA;
+  letter-spacing: 0.3px;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ── New Trip Button ── */
+.new-trip-button {
+  width: calc(100% - 48px);
+  background: #FFFFFF;
+  border: none;
+  border-radius: 100px;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #111;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.new-trip-button:active {
+  background: #F5F5F5;
+}
+
+.new-trip-icon {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+}

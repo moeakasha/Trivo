@@ -1,27 +1,48 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../Fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../Fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../Fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../Fonts/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../Fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
 :root {
-    --ion-font-family: 'Inter', sans-serif;
-
-    --ion-color-primary: #002d30;
-    --ion-color-primary-rgb: 0, 45, 48;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-shade: #00282a;
-    --ion-color-primary-tint: #1a4245;
-
-    --ion-color-accent: #e6ff00;
-    --ion-color-accent-rgb: 230, 255, 0;
-    --ion-color-accent-contrast: #000000;
-    --ion-color-accent-contrast-rgb: 0, 0, 0;
-
-    --ion-color-card: #f4f7f8;
-    --ion-color-muted: #9ba3af;
+    --f7-font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto", sans-serif;
 }
 
-html,
-body {
-    font-family: 'Inter', sans-serif !important;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: var(--f7-font-family);
 }
 
-* {
-    font-family: inherit;
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
