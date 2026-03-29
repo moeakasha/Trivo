@@ -1,0 +1,167 @@
+.country-sheet {
+  --f7-sheet-bg-color: #ffffff;
+  border-radius: 28px 28px 0 0 !important;
+  height: 92vh;
+}
+
+.cs-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Handle ── */
+.cs-handle {
+  width: 40px;
+  height: 5px;
+  background: #D1D1D6;
+  border-radius: 100px;
+  margin: 12px auto 0;
+  flex-shrink: 0;
+}
+
+/* ── Header ── */
+.cs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px 12px;
+  flex-shrink: 0;
+}
+
+.cs-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+}
+
+.cs-header-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cs-close {
+  background: #E5E5EA;
+}
+
+.cs-confirm {
+  background: #C8C8CD;
+  transition: background 0.2s;
+}
+
+.cs-confirm--active {
+  background: #007AFF;
+}
+
+/* ── Search ── */
+.cs-search-wrap {
+  padding: 0 16px 12px;
+  flex-shrink: 0;
+}
+
+.cs-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #F2F2F7;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.cs-search-icon {
+  flex-shrink: 0;
+}
+
+.cs-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 17px;
+  color: #111;
+}
+
+.cs-search-input::placeholder {
+  color: #8E8E93;
+}
+
+/* ── Body (list + A-Z) ── */
+.cs-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Country list ── */
+.cs-list {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 24px;
+}
+
+.cs-section-header {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8E8E93;
+  padding: 8px 16px 4px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.cs-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 13px 16px;
+  cursor: pointer;
+}
+
+.cs-item:active {
+  background: #F2F2F7;
+}
+
+.cs-item-name {
+  flex: 1;
+  font-size: 17px;
+  color: #111;
+}
+
+.cs-item-divider {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 0;
+  height: 0.5px;
+  background: #C6C6C8;
+}
+
+/* ── A-Z sidebar ── */
+.cs-az-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 6px;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.cs-az-letter {
+  font-size: 11px;
+  font-weight: 600;
+  color: #007AFF;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+}

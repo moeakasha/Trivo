@@ -1,0 +1,133 @@
+.date-sheet {
+  --f7-sheet-bg-color: #ffffff;
+  border-radius: 28px 28px 0 0 !important;
+  height: auto;
+}
+
+.ds-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px 0;
+}
+
+/* ── Handle ── */
+.ds-handle {
+  width: 40px;
+  height: 5px;
+  background: #D1D1D6;
+  border-radius: 100px;
+  margin: 12px 0 0;
+  flex-shrink: 0;
+}
+
+/* ── Title ── */
+.ds-title {
+  font-size: 17px !important;
+  font-weight: 700;
+  color: #111;
+  margin: 16px 0 20px;
+}
+
+/* ── Date pills ── */
+.ds-pills-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.ds-pill {
+  flex: 1;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 296px;
+  background: #F2F2F7;
+  border: 1.5px solid transparent;
+  font-size: 15px;
+  color: #8E8E93;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.ds-pill--set {
+  background: #fff;
+  border-color: #111;
+  color: #111;
+  font-weight: 500;
+}
+
+/* ── F7 Calendar overrides ── */
+.ds-calendar-wrap {
+  width: 100%;
+}
+
+.ds-calendar-wrap .calendar {
+  width: 100%;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+.ds-calendar-wrap .calendar-month-selector,
+.ds-calendar-wrap .calendar-year-selector {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111;
+}
+
+.ds-calendar-wrap .calendar-prev-month-button,
+.ds-calendar-wrap .calendar-next-month-button {
+  color: #007AFF;
+}
+
+.ds-calendar-wrap .calendar-day-selected .calendar-day-number {
+  background: #007AFF;
+  color: #fff;
+}
+
+.ds-calendar-wrap .calendar-day-today .calendar-day-number {
+  color: #007AFF;
+}
+
+.ds-calendar-wrap .calendar-day-in-range .calendar-day-number {
+  background: rgba(0, 122, 255, 0.12);
+  color: #007AFF;
+  border-radius: 50%;
+}
+
+.ds-calendar-wrap .calendar-week-header {
+  color: #8E8E93;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ── Footer ── */
+.ds-footer {
+  width: 100%;
+  padding: 16px 0 36px;
+}
+
+.ds-continue {
+  width: 100%;
+  height: 56px;
+  background: #C6FF00;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #111;
+  cursor: pointer;
+}
+
+.ds-continue:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.ds-continue:active:not(:disabled) {
+  opacity: 0.85;
+}

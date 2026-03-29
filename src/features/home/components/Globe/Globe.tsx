@@ -38,11 +38,15 @@ const STYLE: maplibregl.StyleSpecification = {
   ],
 };
 
-const Globe: React.FC = () => {
+interface Props {
+  spin?: boolean;
+}
+
+const Globe: React.FC<Props> = ({ spin = true }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const rafRef = useRef<number>(0);
-  const spinning = useRef(true);
+  const spinning = useRef(spin);
   const selected = useRef<Set<string>>(new Set());
   const propKey = useRef<string>("name"); // discovered on first click
 
@@ -115,9 +119,9 @@ const Globe: React.FC = () => {
     });
 
     map.on("dragstart",  () => { spinning.current = false; });
-    map.on("dragend",    () => { spinning.current = true; });
+    map.on("dragend",    () => { spinning.current = spin; });
     map.on("touchstart", () => { spinning.current = false; });
-    map.on("touchend",   () => { spinning.current = true; });
+    map.on("touchend",   () => { spinning.current = spin; });
 
     return () => {
       cancelAnimationFrame(rafRef.current);
