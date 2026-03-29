@@ -1,0 +1,311 @@
+.trivo-page {
+    --background: #ffffff;
+}
+
+.trivo-toolbar {
+    --background: transparent;
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 10px calc(50vw - 40px);
+    /* Responsive centering padding */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.tab-container::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ion-color-muted);
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tab-button.active {
+    background: var(--ion-color-primary);
+    color: white;
+}
+
+.map-section {
+    height: 38vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, transparent, #ffffff);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.map-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.map-overlay-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    background: linear-gradient(to left, transparent, #ffffff);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.map-overlay-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    background: linear-gradient(to right, transparent, #ffffff);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.interactive-map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Marker Styling */
+.custom-marker {
+    width: 20px;
+    height: 20px;
+    background: #FF3B30;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+.custom-marker::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid #FF3B30;
+    border-radius: 50%;
+    animation: marker-pulse-ring 2s infinite ease-out;
+}
+
+@keyframes marker-pulse-ring {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.content-container {
+    padding: 0 20px;
+}
+
+.section-title p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #9BA3AF;
+}
+
+.trip-card {
+    margin: 0;
+    border-radius: 20px;
+    background: var(--ion-color-card);
+    box-shadow: none;
+}
+
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.empty-state-image {
+    width: 280px;
+    height: auto;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+
+.create-trip-button {
+    --background: var(--ion-color-accent);
+    --color: #000;
+    --border-radius: 30px;
+    --box-shadow: none;
+    font-weight: 700;
+    font-size: 16px;
+    height: 54px;
+    margin-top: 10px;
+}
+
+/* USA Slide Styles */
+.usa-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.usa-empty-state {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.usa-tree-image {
+    width: 280px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.usa-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.usa-subtitle {
+    font-size: 16px;
+    color: #9BA3AF;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.add-to-trip-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.add-trip-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.plus-icon {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* Slide Styles */
+.slide-content {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 40px;
+}
+
+.slide-content.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.placeholder-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-large {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.placeholder-view h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ion-color-primary);
+    margin: 0;
+}
+
+.placeholder-view p {
+    color: var(--ion-color-muted);
+    font-size: 16px;
+    max-width: 250px;
+    margin: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Base Ionic Adjustments */
+ion-content {
+    --background: #ffffff;
+}
+
+ion-toolbar {
+    --background: #ffffff;
+    --border-style: none;
+}
